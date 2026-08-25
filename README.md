@@ -9,9 +9,6 @@ visibility — so the moment you roll privately as GM, your players lose the but
 too, and can't react. This module keeps your numbers hidden but sends the defend
 buttons through to the targeted player anyway.
 
-![GM sees the roll; the targeted player sees only the defend buttons](docs/hidden-opposed-rolls.png)
-<!-- TODO screenshot: side-by-side of the GM chat log (roll + buttons) and the player's
-     chat log (defend buttons, no numbers). Drop the image at docs/hidden-opposed-rolls.png. -->
 
 ## Features
 
@@ -51,22 +48,6 @@ defend buttons and rolls their reaction from their own sheet.
 | --- | --- | --- |
 | **Hide GM Opposed Rolls** | On | Hides your opposed roll from players while still delivering the defend buttons to the target. Turn it off for stock behaviour, where hiding the roll also hides the buttons. |
 
-## Known issues
-
-- Only rolls **you make as GM** are touched. Player-initiated attacks are left alone
-  — this is deliberate, but worth knowing if you expected it to cover both.
-- Only opposed rolls (rolls made against a target) are affected. Ordinary GM rolls
-  with no target aren't hidden.
-- The final result card (who won the exchange) keeps its normal visibility, so the
-  player still learns the outcome.
-- Tested against wfrp4e 9.6.3. It relies on the system's opposed-test chat structure;
-  a future system release that reworks that structure could need an update.
-
-## How it works
-
-One `preCreateChatMessage` hook. When you make an opposed attack, it forces the roll
-card to GM-only and re-routes the defend-button card to the targeted actor's owners.
-No system files are patched.
 
 ## License
 
