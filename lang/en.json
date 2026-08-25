@@ -1,0 +1,6 @@
+{
+    "wfrp4e-hidden-opposed-rolls": {
+        "SettingEnabledName": "Hide GM Opposed Rolls",
+        "SettingEnabledHint": "When enabled, an opposed roll you make as the GM (e.g. an attack against a player) is hidden from your players, but the targeted player still receives the defend/response buttons so they can react. Disable for vanilla behaviour, where hiding your roll also hides the buttons."
+    }
+}
